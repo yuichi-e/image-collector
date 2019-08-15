@@ -65,13 +65,12 @@ class GoogleImageSerch(object):
 
 def main(args):
     os.makedirs(args.download_dir, exist_ok=True)
-    os.makedirs(os.path.join(args.download_dir, args.target_name), exist_ok=True)
+    # os.makedirs(os.path.join(args.download_dir, args.target_name), exist_ok=True)
 
     google_image_serch = GoogleImageSerch()
 
     # search images
     results = google_image_serch.search(args.target_name, maximum=args.num_images)
-    
     
     # nowtime
     now = datetime.datetime.now()
