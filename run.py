@@ -2,12 +2,13 @@ import argparse
 import json
 import os
 import urllib
+import datetime
 
 from bs4 import BeautifulSoup
 import requests
 from termcolor import cprint
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 
 class GoogleImageSerch(object):
@@ -70,11 +71,16 @@ def main(args):
 
     # search images
     results = google_image_serch.search(args.target_name, maximum=args.num_images)
+    
+    
+    # nowtime
+    now = datetime.datetime.now()
+    prefix = "{0:%Y%m%d_v%f}_".format(now)
 
     # download
     download_errors = []
     for i, url in enumerate(results):
-        download_name = f"{(i + 1):>0{max(4, len(str(args.num_images)))}}.jpg"
+        download_name = f"{prefix}{(i + 1):>0{max(4, len(str(args.num_images)))}}.jpg"
         download_path = os.path.join(args.download_dir, args.target_name, download_name)
 
         if os.path.exists(download_path) and not args.is_overwrite:
