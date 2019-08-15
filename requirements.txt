@@ -1,27 +1,27 @@
-appdirs==1.4.3
-astroid==2.2.5
-attrs==19.1.0
-beautifulsoup4==4.7.1
-black==19.3b0
-certifi==2019.3.9
-chardet==3.0.4
-Click==7.0
-entrypoints==0.3
-flake8==3.7.7
-idna==2.8
-isort==4.3.20
-lazy-object-proxy==1.4.1
-lxml==4.3.3
-mccabe==0.6.1
-mypy==0.701
-mypy-extensions==0.4.1
-pycodestyle==2.5.0
-pyflakes==2.1.1
-pylint==2.3.1
-requests==2.21.0
-six==1.12.0
-soupsieve==1.9.1
-toml==0.10.0
-typed-ast==1.3.5
-urllib3==1.24.3
-wrapt==1.11.1
+pip install appdirs==1.4.3
+pip install astroid==2.2.5
+pip install attrs==19.1.0
+pip install beautifulsoup4==4.7.1
+pip install black==19.3b0
+pip install certifi==2019.3.9
+pip install chardet==3.0.4
+pip install Click==7.0
+pip install entrypoints==0.3
+pip install flake8==3.7.7
+pip install idna==2.8
+pip install isort==4.3.20
+pip install lazy-object-proxy==1.4.1
+pip install lxml==4.3.3
+pip install mccabe==0.6.1
+pip install mypy==0.701
+pip install mypy-extensions==0.4.1
+pip install pycodestyle==2.5.0
+pip install pyflakes==2.1.1
+pip install pylint==2.3.1
+pip install requests==2.21.0
+pip install six==1.12.0
+pip install soupsieve==1.9.1
+pip install toml==0.10.0
+pip install typed-ast==1.3.5
+pip install urllib3==1.24.3
+pip install wrapt==1.11.1
