@@ -16,8 +16,7 @@ class GoogleImageSerch(object):
         self.session = requests.session()
         self.session.headers.update(
             {
-                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) \
-                    Gecko/20100101 Firefox/10.0"
+                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0"
             }
         )
 
@@ -31,7 +30,7 @@ class GoogleImageSerch(object):
         page = 0
         while True:
             params = urllib.parse.urlencode(
-                {"q": keyword, "imgsz": "2mp", "tbm": "isch", "ijn": str(page)}
+                {"q": keyword, "imgsz": "2mp", "tbm": "isch", "safe": "off", "ijn": str(page)}
             )
 
             yield self.GOOGLE_IMAGE_SEARCH_URL + "?" + params
