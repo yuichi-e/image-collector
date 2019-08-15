@@ -81,7 +81,7 @@ def main(args):
     download_errors = []
     for i, url in enumerate(results):
         download_name = f"{prefix}{(i + 1):>0{max(4, len(str(args.num_images)))}}.jpg"
-        download_path = os.path.join(args.download_dir, args.target_name, download_name)
+        download_path = os.path.join(args.download_dir, download_name)
 
         if os.path.exists(download_path) and not args.is_overwrite:
             print(f"{download_path} is already exists.")
