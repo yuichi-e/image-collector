@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import requests
 from termcolor import cprint
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 class GoogleImageSerch(object):
