@@ -31,7 +31,7 @@ class GoogleImageSerch(object):
         page = 0
         while True:
             params = urllib.parse.urlencode(
-                {"q": keyword, "imgsz": "2mp", "tbm": "isch", "safe": "off", "ijn": str(page)}
+                {"q": keyword, "imgsz": "4mp", "tbm": "isch", "safe": "off", "ijn": str(page)}
             )
 
             yield self.GOOGLE_IMAGE_SEARCH_URL + "?" + params
