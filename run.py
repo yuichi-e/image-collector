@@ -65,7 +65,7 @@ class GoogleImageSerch(object):
 
 def main(args):
     os.makedirs(args.download_dir, exist_ok=True)
-    # os.makedirs(os.path.join(args.download_dir, args.target_name), exist_ok=True)
+    os.makedirs(os.path.join(args.download_dir, args.target_name), exist_ok=True)
 
     google_image_serch = GoogleImageSerch()
 
@@ -80,7 +80,7 @@ def main(args):
     download_errors = []
     for i, url in enumerate(results):
         download_name = f"{prefix}{(i + 1):>0{max(4, len(str(args.num_images)))}}.jpg"
-        download_path = os.path.join(args.download_dir, download_name)
+        download_path = os.path.join(args.download_dir, args.target_name, download_name)
 
         if os.path.exists(download_path) and not args.is_overwrite:
             print(f"{download_path} is already exists.")
@@ -139,7 +139,7 @@ if __name__ == "__main__":
         dest="download_dir",
         help="Download location",
         type=str,
-        default="./data",
+        default="c:/users/atain/dropbox/tmpImg",
     )
     parser.add_argument(
         "-f",
